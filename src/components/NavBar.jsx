@@ -1,5 +1,6 @@
 import CartWidget from "./CartWidget";
-import logo from "./images/logo.jpg"
+import logo from "./images/logo.jpg";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -8,17 +9,17 @@ const NavBar = () => {
                 <div className="col">
                     <nav className="navbar navbar-expand-lg">
                         <div className="container-fluid">
-                            <a className="navbar-brand" href={"/"}><img src={logo} alt="Rodados Ardana" width={180} title={"Rodados Ardana"} /></a>
+                            <Link className="navbar-brand" to={"/"}><img src={logo} alt="Rodados Ardana" width={180} title={"Rodados Ardana"} /></Link>
                             <div className="collapse navbar-collapse" id="navbarNav">
                                 <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link " aria-current="page" href={"/"} title={"Inicio"}>Inicio</a>
+                                    <NavLink className="nav-link " activeclassname={"active"} to={"/Inicio"}>Inicio</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href={"/Productos"} title={"Productos"}>Productos</a>
+                                    <NavLink className="nav-link" activeclassname={"active"} to={"/category/bicicletas"} >Bicicletas</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href={"/Contacto"} title={"Contacto"}>Contacto</a>
+                                    <NavLink className="nav-link" activeclassname={"active"} to={"/category/indumentaria"} >Indumentaria</NavLink>
                                 </li>
                                 </ul>
                             </div>

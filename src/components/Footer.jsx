@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="col">
                     <h6>CONTACTANOS</h6>
                     <p className="my-1"><img src={telefono} alt="telefono" width={20} ></img> 342 536-9466</p>
-                    <a href={"https://goo.gl/maps/rNovQ6n641JvZQe66"}><p className="my-0"><img src={ubicacion} alt="ubicacion" width={24}></img>Belgrano 2071 · (3016) Santo Tomé (Santa Fe)</p></a>
+                    <a href={"https://goo.gl/maps/rNovQ6n641JvZQe66"} className="text-decoration-none text-black"><p className="my-0"><img src={ubicacion} alt="ubicacion" width={24}></img>Belgrano 2071 · (3016) Santo Tomé (Santa Fe)</p></a>
                 </div>
             </div>
         </div>
