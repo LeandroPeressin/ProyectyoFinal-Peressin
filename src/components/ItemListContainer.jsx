@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import arrayCatalogo from "./json/catalogo.json"
 
+
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {id} = useParams();
@@ -11,23 +12,22 @@ const ItemListContainer = () => {
         const promesa = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(id ? arrayCatalogo.filter(item => item.categoria === id) : arrayCatalogo);
-            })
+            }, 2000)
         })
         promesa.then((respuesta) => {
             setItems(respuesta);
-        })
-
-
-    }, [id])
+        });
+    }, [id]);
 
 
 
 
     return (
         <div className="container">            
-            <ItemList items={items} />            
+            <ItemList items={items} />        
         </div>
     )
+    
 }
 
 export default ItemListContainer;

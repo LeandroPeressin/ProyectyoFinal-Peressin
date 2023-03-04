@@ -13,7 +13,7 @@ const NavBar = () => {
                             <div className="collapse navbar-collapse" id="navbarNav">
                                 <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <NavLink className="nav-link " activeclassname={"active"} to={"/Inicio"}>Inicio</NavLink>
+                                    <NavLink className="nav-link" activeclassname={"active"} to={"/"}>Inicio</NavLink>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink className="nav-link" activeclassname={"active"} to={"/category/bicicletas"} >Bicicletas</NavLink>
